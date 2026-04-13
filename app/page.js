@@ -15,6 +15,7 @@ export default async function HomePage() {
   return (
     <>
     <Header/>
+     {/* Thêm hiển thị danh sách bài viết */}
      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
     {posts.slice(0, 12).map(post => (
       <BlogCard key={post.id} post={post} />
