@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Header from '@/components/Header';
+import Badge from '@/components/Badge';
 
 async function getPostDetail(id) {
   const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
@@ -35,7 +36,7 @@ export default async function BlogDetail({ params }) {
 
         {/* Nội dung bài viết */}
         <article className="bg-white border rounded-2xl p-8 shadow-sm">
-          <span className="text-gray-500 text-xs font-bold uppercase tracking-widest">
+          <span className="text-sm text-gray-500">
             Post ID: {post.id}
           </span>
           <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 mt-4 mb-6 leading-tight">
